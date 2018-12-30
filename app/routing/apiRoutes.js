@@ -10,13 +10,13 @@ module.exports = function(app){
 
 		var bestMatch = {
 			name: "",
-			pic: "",
+			photo: "",
 			friendDifference: 1000
 		};
 
 		var userData 	= req.body;
 		var userName 	= userData.name;
-		var userPic 	= userData.pic;
+		var userPhoto 	= userData.photo;
 		var userScores 	= userData.scores;
 
 		var totalDifference = 0;
@@ -33,7 +33,7 @@ module.exports = function(app){
 				if (totalDifference <= bestMatch.friendDifference){
  
 					bestMatch.name = friends[i].name;
-					bestMatch.pic = friends[i].pic;
+					bestMatch.photo = friends[i].photo;
 					bestMatch.friendDifference = totalDifference;
 				}
 			}
